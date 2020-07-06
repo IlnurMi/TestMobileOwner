@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/blueColorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_report_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:background="@drawable/tv_bg">
+
+        <ImageView
+                android:id="@+id/iv_report_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_doc"
+                app:layout_constraintStart_toStartOf="@id/cl_report_type"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/cl_report_type"
+                app:layout_constraintTop_toTopOf="@id/cl_report_type"/>
+
+        <TextView
+                android:id="@+id/tv_report_type_new"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_500"
+                android:hint="Тип отчета"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/iv_report_icon"
+                app:layout_constraintEnd_toEndOf="@id/cl_report_type"
+                android:layout_marginStart="32dp"
+                />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_cars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_report_type"
+            android:clickable="true"
+            android:background="@drawable/tv_bg">
+
+        <ImageView
+                android:id="@+id/iv_cars_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_truc"
+                app:layout_constraintStart_toStartOf="@id/cl_cars"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/cl_cars"
+                app:layout_constraintTop_toTopOf="@id/cl_cars"/>
+
+        <TextView
+                android:id="@+id/tv_cars_type_new"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_500"
+                android:hint="Автомобиль"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/iv_cars_icon"
+                app:layout_constraintEnd_toEndOf="@id/cl_cars"
+                android:layout_marginStart="32dp"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+            android:id="@+id/view_line_new"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/blueColorPrimary"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_cars"
+            app:layout_constraintStart_toStartOf="@id/tv_cars_type_new"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="NotSibling" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_date_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view_line_new"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:background="@drawable/tv_bg">
+
+        <ImageView
+                android:id="@+id/iv_date_start_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_calen"
+                app:layout_constraintStart_toStartOf="@id/cl_date_start"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/cl_date_start"
+                app:layout_constraintTop_toTopOf="@id/cl_date_start"/>
+
+        <TextView
+                android:id="@+id/tv_date_start_new"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_500"
+                android:hint="Дата начала"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/iv_date_start_icon"
+                app:layout_constraintEnd_toEndOf="@id/cl_date_start"
+                android:layout_marginStart="32dp"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_date_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_date_start"
+            android:clickable="true"
+            android:background="@drawable/tv_bg">
+
+        <ImageView
+                android:id="@+id/iv_date_end_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_calen"
+                app:layout_constraintStart_toStartOf="@id/cl_date_end"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/cl_date_end"
+                app:layout_constraintTop_toTopOf="@id/cl_date_end"/>
+
+        <TextView
+                android:id="@+id/tv_date_end_new"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_500"
+                android:hint="Дата завершения"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/iv_date_end_icon"
+                app:layout_constraintEnd_toEndOf="@id/cl_date_end"
+                android:layout_marginStart="32dp"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <Button
+            android:id="@+id/btn_report_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/blueColorPrimary"
+            android:text="Заказать отчет"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,105 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/btn_login_stroke_color</item>
+  </style>
+
+  <style name="EditScreenTextInputLayoutStyle" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorControlNormal">@color/colorAccent</item>
+    <item name="colorControlActivated">@color/colorAccent</item>
+    <item name="colorControlHighlight">@color/colorAccent</item>
+    <item name="android:textColorHint">@color/colorAccent</item>
+  </style>
+
+  <style name="ToolbarColoredBackArrow" parent="AppTheme">
+    <item name="android:textColorSecondary">@color/white</item>
+  </style>
+
+  <style name="AppTheme.NavigationView">
+    <item name="android:textColorSecondary">@color/white</item>
+    <item name="android:textSize">20sp</item>
+  </style>
+
+  <style name="AppThemeToolBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="searchViewStyle">@style/AppSearchViewStyle</item>
+  </style>
+  <style name="AppSearchViewStyle" parent="Widget.AppCompat.SearchView">
+    <item name="android:textCursorDrawable">@drawable/white_cursor</item>
+    <item name="queryBackground">@android:color/transparent</item>
+    <item name="searchIcon">@drawable/icon_toolbar_search</item>
+    <item name="closeIcon">@drawable/icon_toolbar_clear</item>
+    <item name="queryHint">@string/search_hint</item>
+    <item name="android:imeActionId">6</item>
+  </style>
+
+
+  <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+    <item name="android:textSize">18dp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="StyleMarker" parent="Base.Widget.Design.TabLayout">
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="AppTheme.PopupOverlay" parent="AppTheme.PopupOverlay" tools:ignore="ResourceCycle">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:textColorPrimary">@color/white</item>
+    <item name="android:textColorSecondary">@color/white</item>
+  </style>
+
+  <style name="AlertDialogCustom" parent="@android:style/Theme.Material.Dialog" tools:targetApi="lollipop">
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:headerDividersEnabled">true</item>
+    <item name="android:background">@color/white</item>
+  </style>
+
+  <style name="DialogBaseTheme" parent="android:Theme.DeviceDefault.Light.Dialog.NoActionBar"/>
+
+  <style name="TextViewsForAlert">
+    <item name="android:paddingTop">@dimen/dimen_12_dp</item>
+    <item name="android:paddingBottom">@dimen/dimen_12_dp</item>
+    <item name="android:paddingLeft">@dimen/dimen_8_dp</item>
+    <item name="android:layout_marginTop">@dimen/dimen_16_dp</item>
+    <item name="android:layout_marginLeft">@dimen/dimen_16_dp</item>
+    <item name="android:layout_marginRight">@dimen/dimen_16_dp</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:background">@drawable/textviews_task</item>
+  </style>
+
+  <style name="EditTextForMarketPlace">
+    <item name="android:layout_marginRight">@dimen/dimen_8_dp</item>
+    <item name="android:paddingTop">@dimen/dimen_8_dp</item>
+    <item name="android:paddingBottom">@dimen/dimen_8_dp</item>
+    <item name="android:background">@drawable/textviews_task</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:textSize">@dimen/text_18_sp</item>
+  </style>
+
+  <style name="EditTextForMarketPlace.WithMargins">
+    <item name="android:layout_marginTop">@dimen/dimen_16_dp</item>
+    <item name="android:layout_marginLeft">@dimen/dimen_16_dp</item>
+    <item name="android:layout_marginRight">@dimen/dimen_16_dp</item>
+    <item name="android:paddingTop">@dimen/dimen_12_dp</item>
+    <item name="android:paddingBottom">@dimen/dimen_12_dp</item>
+    <item name="android:paddingLeft">@dimen/dimen_8_dp</item>
+  </style>
+
+  <style name="MySwitch" parent="Theme.AppCompat.Light">
+    <item name="colorControlActivated">@android:color/holo_blue_dark</item>
+    <item name="android:colorForeground">@android:color/darker_gray</item>
+  </style>
+
+
+</resources>

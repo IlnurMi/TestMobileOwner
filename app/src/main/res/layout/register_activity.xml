@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/blueColorPrimaryDark">
+
+  <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar_register"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blueColorPrimaryDark"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+    app:layout_constraintTop_toTopOf="parent"
+    app:popupTheme="@style/AppTheme"
+    app:theme="@style/ToolbarColoredBackArrow"
+    app:titleTextColor="@color/white" />
+
+  <ProgressBar
+    android:id="@+id/pb_register"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:indeterminateOnly="true"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar_register" />
+  <ScrollView
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/pb_register"
+          android:scrollbars="vertical"
+          android:scrollbarThumbVertical="@drawable/custom_scroll_style">
+
+    <LinearLayout
+            android:id="@+id/base_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraint_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <include
+              android:id = "@+id/physical_face"
+              layout = "@layout/physics_register_form"
+              android:visibility="gone"/>
+      <include
+              android:id="@+id/juridical_face"
+              layout = "@layout/juridical_register_form"
+              android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/constraint_layout">
+      <CheckBox
+              android:id="@+id/chbx_apply"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="12dp"
+              android:layout_marginBottom="8dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginEnd="16dp"
+              android:text="Согласен на обработку персональных данных"
+              android:textColor="@color/white"
+              android:buttonTint="@color/white"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"/>
+
+      <Button
+              android:id="@+id/btn_register"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginTop="12dp"
+              android:layout_marginBottom="8dp"
+              android:layout_marginLeft="32dp"
+              android:layout_marginRight="32dp"
+              android:background="@drawable/back_button_login"
+              android:text="Зарегестрироваться"
+              android:textColor="@color/white"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/chbx_apply"
+              android:enabled="false"
+              android:alpha="0.5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+  </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MobileOwner</string>
+
+    <string name="drawer_main_open">Open</string>
+    <string name="drawer_main_close">Close</string>
+
+
+    <string name="text_setting_profile">Личные данные</string>
+    <string name="text_setting_design">Интерфейс</string>
+    <string name="text_setting_notification">Уведомления и звук</string>
+    <string name="text_setting_language">Язык</string>
+    <string name="text_setting_help">Помощь</string>
+    <string name="text_setting_exit">Mobile-Owner</string>
+
+    <string name="message">Сообщения</string>
+    <string name="error_in_application">Произошла ошибка в работе приложения</string>
+    <string name="contacts">Контакты</string>
+    <string name="recovery_password">Восстоновить пароль</string>
+    <string name="download_report">Загрузка отчета завершена</string>
+    <string name="download_file_name">Files</string>
+    <string name="app_notifi">App notification</string>
+    <string name="select_car">Выберите автомобиль</string>
+    <string name="select_report">Выберите тип отчета</string>
+    <string name="reports">Отчёты</string>
+    <string name="start_download_report">Началась загрузка отчета</string>
+    <string name="list_empty">Список пустой</string>
+    <string name="report_create">Ваш отчет создается. Письмо об окончании создания придет к вам на почту</string>
+    <string name="reports_order">Заказ отчетов</string>
+    <string name="not_conection">Отсутствует соединение с интернетом</string>
+
+    <string-array name="chart_list">
+        <item>Пробег</item>
+        <item>Топливо</item>
+    </string-array>
+</resources>

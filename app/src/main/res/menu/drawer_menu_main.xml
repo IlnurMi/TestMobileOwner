@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/item_map"
+      android:title="@string/menu_title_map"
+      android:icon="@drawable/ic_facebook_placeholder_for_locate_places_on_maps"/>
+    <item
+      android:id="@+id/item_message"
+      android:title="@string/menu_title_message"
+      android:icon="@drawable/ic_black_back_closed_envelope_shape" />
+    <item
+            android:id="@+id/item_drivers"
+            android:title="@string/menu_title_drivers"
+            android:icon="@drawable/ic_delivery_man"/>
+
+    <item
+        android:id="@+id/item_reports"
+        android:title="Отчёты"
+        android:icon="@drawable/ic_newspaper"
+        />
+  </group>
+
+
+  <group
+    android:checkableBehavior="single">
+    <item
+      android:id="@+id/item_settings"
+      android:title="@string/menu_title_settings"
+            android:icon="@drawable/ic_repairing_service"/>
+
+  </group>
+
+
+</menu>

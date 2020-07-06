@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.ilnur.mobileowner"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    supportLibs = '28.0.0'
+    constraint = '1.1.3'
+    dagger = '2.19'
+    rxJava = '2.2.3'
+    rxAndroid = '2.1.0'
+    okHttp = '3.12.0'
+    retrofit = '2.7.0'
+    gson = '2.8.5'
+    room = '2.2.3'
+    junit = '4.12'
+    circleImageView = '2.2.0'
+    google = '16.0.0'
+    mapUtils = '0.5'
+    butterknife = '10.0.0'
+    picasso = '2.71828'
+    firebase = '16.0.6'
+    firebasePushs = '20.2.0'
+    crashlytics = '2.9.7'
+    materialStepper = '4.3.1'
+    multidex = '1.0.3'
+    input_mask = '4.0.0'
+    mask = '1.0.5'
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // rxjava
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava"
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+
+    // developer tools
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp"
+
+    // gson
+    implementation "com.google.code.gson:gson:$gson"
+
+    // room db
+    implementation "androidx.room:room-runtime:$room"
+    implementation "androidx.room:room-rxjava2:$room"
+    implementation "androidx.room:room-testing:$room"
+    kapt "androidx.room:room-compiler:$room"
+
+    implementation "de.hdodenhof:circleimageview:$circleImageView"
+
+    implementation "com.google.android.gms:play-services-maps:$google"
+    implementation "com.google.android.gms:play-services-location:$google"
+    implementation "com.google.maps.android:android-maps-utils:$mapUtils"
+
+
+    implementation "com.stepstone.stepper:material-stepper:$materialStepper"
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+
+    implementation "com.squareup.picasso:picasso:$picasso"
+
+    implementation "com.jakewharton:butterknife:$butterknife"
+    kapt "com.jakewharton:butterknife-compiler:$butterknife"
+
+    implementation "ru.egslava:MaskedEditText:$mask"
+    implementation 'androidx.fragment:fragment:1.0.0'
+
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.microsoft.signalr:signalr:3.0.0'
+    implementation 'com.smartarmenia:dotnetcoresignalrclientjava:1.14'
+    implementation 'org.slf4j:slf4j-jdk14:1.7.25'
+
+
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+
+    //firebase
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation "com.google.firebase:firebase-core:17.4.0"
+    implementation "com.google.firebase:firebase-messaging:$firebasePushs"
+    implementation "com.crashlytics.sdk.android:crashlytics:$crashlytics"
+    implementation 'com.google.firebase:firebase-analytics-ktx:17.4.3'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.1'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

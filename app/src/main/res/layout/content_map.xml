@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <fragment
+      android:id="@+id/map"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:name="com.google.android.gms.maps.MapFragment"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_cars_on_maps"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/map"
+        app:layout_constraintStart_toStartOf="@id/map"/>
+
+    <ImageView
+        android:id="@+id/iv_plus_zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_for_maps"
+        android:padding="4dp"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="6dp"/>
+
+    <ImageView
+        android:id="@+id/iv_minus_zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_for_maps"
+        android:padding="4dp"
+        android:src="@drawable/ic_minus_symbol"
+        app:layout_constraintTop_toBottomOf="@id/iv_plus_zoom"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"/>
+
+    <ImageView
+        android:id="@+id/iv_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@drawable/circle_for_maps"
+        android:src="@drawable/ic_refresh"
+        app:layout_constraintTop_toBottomOf="@id/iv_minus_zoom"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"/>
+
+
+    <ImageView
+        android:id="@+id/iv_choose_map_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@drawable/circle_for_maps"
+        android:src="@drawable/ic_layer"
+        app:layout_constraintTop_toBottomOf="@id/iv_replay"
+            app:layout_constraintBottom_toTopOf="@id/iv_my_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="6dp"/>
+
+    <ImageView
+        android:id="@+id/iv_my_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@drawable/circle_for_maps"
+        android:src="@drawable/ic_target"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp"
+        android:layout_marginEnd="6dp"/>
+  </androidx.constraintlayout.widget.ConstraintLayout>

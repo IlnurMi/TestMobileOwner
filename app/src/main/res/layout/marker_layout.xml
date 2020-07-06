@@ -1,0 +1,22 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/marker_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:src="@drawable/rd2" />
+
+    <TextView
+            android:id="@+id/marker_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            tools:text="номер" />
+
+</merge>

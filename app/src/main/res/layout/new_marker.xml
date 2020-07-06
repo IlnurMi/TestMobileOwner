@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/iv_new_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gr2"
+                tools:ignore="MissingConstraints" />
+
+        <TextView
+                android:id="@+id/tv_new_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="номер"
+                app:layout_constraintBottom_toBottomOf="@id/iv_new_marker"
+                app:layout_constraintEnd_toEndOf="@id/iv_new_marker"
+                app:layout_constraintStart_toStartOf="@id/iv_new_marker" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
